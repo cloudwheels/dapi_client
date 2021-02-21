@@ -16,6 +16,11 @@ void main() {
       var result = await Grpc.getStatus();
       print('result:\n $result');
     });
+
+    test('getBlock', () async {
+      var result = await Grpc.getBlock();
+      print('result:\n $result');
+    });
   });
 
 }

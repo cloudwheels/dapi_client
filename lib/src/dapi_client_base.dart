@@ -12,7 +12,7 @@ class Rpc {
     final body = json.encode(data);
     try {
       final response = await http.post(
-          'http://seed-1.evonet.networks.dash.org:3000',
+          'http://seed-1.testnet.networks.dash.org:3000',
           headers: {'Content-Type': 'application/json'},
           body: body);
       return response.body;
@@ -31,7 +31,7 @@ class GrpcClientSingleton {
 
   GrpcClientSingleton._internal() {
     client = ClientChannel(
-        'seed-1.evonet.networks.dash.org', // Your IP here, localhost might not work.
+        'seed-1.testnet.networks.dash.org', // Your IP here, localhost might not work.
         port: 3010,
         options: ChannelOptions(
           // TODO: Change to secure with server certificates
@@ -75,7 +75,8 @@ class Grpc {
        
       final req = GetBlockRequest()..height=intH.toUnsigned(32) ;
       final res = await client.getBlock(req);
-      //final resCbor = Base64Decoder().convert(res.block);
+      //print('RESULT received:' + res.toString());
+      //final resCbor = Base64Decoder().convert(res.block[1].toString());
       //inst.decodeFromBuffer(res.block);
       //print('RESULT pretty:' + inst.decodedPrettyPrint());
       //print('RESULT json:' + inst.decodedToJSON());

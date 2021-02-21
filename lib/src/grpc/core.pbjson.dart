@@ -3,7 +3,7 @@
 //  source: core.proto
 //
 // @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 const GetStatusRequest$json = const {
   '1': 'GetStatusRequest',
@@ -44,8 +44,8 @@ const GetBlockResponse$json = const {
   ],
 };
 
-const SendTransactionRequest$json = const {
-  '1': 'SendTransactionRequest',
+const BroadcastTransactionRequest$json = const {
+  '1': 'BroadcastTransactionRequest',
   '2': const [
     const {'1': 'transaction', '3': 1, '4': 1, '5': 12, '10': 'transaction'},
     const {'1': 'allow_high_fees', '3': 2, '4': 1, '5': 8, '10': 'allowHighFees'},
@@ -53,8 +53,8 @@ const SendTransactionRequest$json = const {
   ],
 };
 
-const SendTransactionResponse$json = const {
-  '1': 'SendTransactionResponse',
+const BroadcastTransactionResponse$json = const {
+  '1': 'BroadcastTransactionResponse',
   '2': const [
     const {'1': 'transaction_id', '3': 1, '4': 1, '5': 9, '10': 'transactionId'},
   ],
@@ -125,32 +125,53 @@ const GetEstimatedTransactionFeeResponse$json = const {
   ],
 };
 
-const CoreServiceBase$json = const {
-  '1': 'Core',
+const TransactionsWithProofsRequest$json = const {
+  '1': 'TransactionsWithProofsRequest',
   '2': const [
-    const {'1': 'getStatus', '2': '.org.dash.platform.dapi.v0.GetStatusRequest', '3': '.org.dash.platform.dapi.v0.GetStatusResponse'},
-    const {'1': 'getBlock', '2': '.org.dash.platform.dapi.v0.GetBlockRequest', '3': '.org.dash.platform.dapi.v0.GetBlockResponse'},
-    const {'1': 'sendTransaction', '2': '.org.dash.platform.dapi.v0.SendTransactionRequest', '3': '.org.dash.platform.dapi.v0.SendTransactionResponse'},
-    const {'1': 'getTransaction', '2': '.org.dash.platform.dapi.v0.GetTransactionRequest', '3': '.org.dash.platform.dapi.v0.GetTransactionResponse'},
-    const {'1': 'getEstimatedTransactionFee', '2': '.org.dash.platform.dapi.v0.GetEstimatedTransactionFeeRequest', '3': '.org.dash.platform.dapi.v0.GetEstimatedTransactionFeeResponse'},
-    const {'1': 'subscribeToBlockHeadersWithChainLocks', '2': '.org.dash.platform.dapi.v0.BlockHeadersWithChainLocksRequest', '3': '.org.dash.platform.dapi.v0.BlockHeadersWithChainLocksResponse', '6': true},
+    const {'1': 'bloom_filter', '3': 1, '4': 1, '5': 11, '6': '.org.dash.platform.dapi.v0.BloomFilter', '10': 'bloomFilter'},
+    const {'1': 'from_block_hash', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'fromBlockHash'},
+    const {'1': 'from_block_height', '3': 3, '4': 1, '5': 13, '9': 0, '10': 'fromBlockHeight'},
+    const {'1': 'count', '3': 4, '4': 1, '5': 13, '10': 'count'},
+    const {'1': 'send_transaction_hashes', '3': 5, '4': 1, '5': 8, '10': 'sendTransactionHashes'},
+  ],
+  '8': const [
+    const {'1': 'from_block'},
   ],
 };
 
-const CoreServiceBase$messageJson = const {
-  '.org.dash.platform.dapi.v0.GetStatusRequest': GetStatusRequest$json,
-  '.org.dash.platform.dapi.v0.GetStatusResponse': GetStatusResponse$json,
-  '.org.dash.platform.dapi.v0.GetBlockRequest': GetBlockRequest$json,
-  '.org.dash.platform.dapi.v0.GetBlockResponse': GetBlockResponse$json,
-  '.org.dash.platform.dapi.v0.SendTransactionRequest': SendTransactionRequest$json,
-  '.org.dash.platform.dapi.v0.SendTransactionResponse': SendTransactionResponse$json,
-  '.org.dash.platform.dapi.v0.GetTransactionRequest': GetTransactionRequest$json,
-  '.org.dash.platform.dapi.v0.GetTransactionResponse': GetTransactionResponse$json,
-  '.org.dash.platform.dapi.v0.GetEstimatedTransactionFeeRequest': GetEstimatedTransactionFeeRequest$json,
-  '.org.dash.platform.dapi.v0.GetEstimatedTransactionFeeResponse': GetEstimatedTransactionFeeResponse$json,
-  '.org.dash.platform.dapi.v0.BlockHeadersWithChainLocksRequest': BlockHeadersWithChainLocksRequest$json,
-  '.org.dash.platform.dapi.v0.BlockHeadersWithChainLocksResponse': BlockHeadersWithChainLocksResponse$json,
-  '.org.dash.platform.dapi.v0.BlockHeaders': BlockHeaders$json,
-  '.org.dash.platform.dapi.v0.ChainLockSignatureMessages': ChainLockSignatureMessages$json,
+const BloomFilter$json = const {
+  '1': 'BloomFilter',
+  '2': const [
+    const {'1': 'v_data', '3': 1, '4': 1, '5': 12, '10': 'vData'},
+    const {'1': 'n_hash_funcs', '3': 2, '4': 1, '5': 13, '10': 'nHashFuncs'},
+    const {'1': 'n_tweak', '3': 3, '4': 1, '5': 13, '10': 'nTweak'},
+    const {'1': 'n_flags', '3': 4, '4': 1, '5': 13, '10': 'nFlags'},
+  ],
+};
+
+const TransactionsWithProofsResponse$json = const {
+  '1': 'TransactionsWithProofsResponse',
+  '2': const [
+    const {'1': 'raw_transactions', '3': 1, '4': 1, '5': 11, '6': '.org.dash.platform.dapi.v0.RawTransactions', '9': 0, '10': 'rawTransactions'},
+    const {'1': 'instant_send_lock_messages', '3': 2, '4': 1, '5': 11, '6': '.org.dash.platform.dapi.v0.InstantSendLockMessages', '9': 0, '10': 'instantSendLockMessages'},
+    const {'1': 'raw_merkle_block', '3': 3, '4': 1, '5': 12, '9': 0, '10': 'rawMerkleBlock'},
+  ],
+  '8': const [
+    const {'1': 'responses'},
+  ],
+};
+
+const RawTransactions$json = const {
+  '1': 'RawTransactions',
+  '2': const [
+    const {'1': 'transactions', '3': 1, '4': 3, '5': 12, '10': 'transactions'},
+  ],
+};
+
+const InstantSendLockMessages$json = const {
+  '1': 'InstantSendLockMessages',
+  '2': const [
+    const {'1': 'messages', '3': 1, '4': 3, '5': 12, '10': 'messages'},
+  ],
 };
 

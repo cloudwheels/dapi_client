@@ -3,7 +3,7 @@
 //  source: core.proto
 //
 // @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -26,12 +26,12 @@ class CoreClient extends $grpc.Client {
           ($0.GetBlockRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.GetBlockResponse.fromBuffer(value));
-  static final _$sendTransaction =
-      $grpc.ClientMethod<$0.SendTransactionRequest, $0.SendTransactionResponse>(
-          '/org.dash.platform.dapi.v0.Core/sendTransaction',
-          ($0.SendTransactionRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.SendTransactionResponse.fromBuffer(value));
+  static final _$broadcastTransaction = $grpc.ClientMethod<
+          $0.BroadcastTransactionRequest, $0.BroadcastTransactionResponse>(
+      '/org.dash.platform.dapi.v0.Core/broadcastTransaction',
+      ($0.BroadcastTransactionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BroadcastTransactionResponse.fromBuffer(value));
   static final _$getTransaction =
       $grpc.ClientMethod<$0.GetTransactionRequest, $0.GetTransactionResponse>(
           '/org.dash.platform.dapi.v0.Core/getTransaction',
@@ -52,6 +52,12 @@ class CoreClient extends $grpc.Client {
       ($0.BlockHeadersWithChainLocksRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.BlockHeadersWithChainLocksResponse.fromBuffer(value));
+  static final _$subscribeToTransactionsWithProofs = $grpc.ClientMethod<
+          $0.TransactionsWithProofsRequest, $0.TransactionsWithProofsResponse>(
+      '/org.dash.platform.dapi.v0.Core/subscribeToTransactionsWithProofs',
+      ($0.TransactionsWithProofsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.TransactionsWithProofsResponse.fromBuffer(value));
 
   CoreClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -71,11 +77,11 @@ class CoreClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.SendTransactionResponse> sendTransaction(
-      $0.SendTransactionRequest request,
+  $grpc.ResponseFuture<$0.BroadcastTransactionResponse> broadcastTransaction(
+      $0.BroadcastTransactionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
-        _$sendTransaction, $async.Stream.fromIterable([request]),
+        _$broadcastTransaction, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -107,6 +113,16 @@ class CoreClient extends $grpc.Client {
         options: options);
     return $grpc.ResponseStream(call);
   }
+
+  $grpc.ResponseStream<$0.TransactionsWithProofsResponse>
+      subscribeToTransactionsWithProofs(
+          $0.TransactionsWithProofsRequest request,
+          {$grpc.CallOptions options}) {
+    final call = $createCall(_$subscribeToTransactionsWithProofs,
+        $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseStream(call);
+  }
 }
 
 abstract class CoreServiceBase extends $grpc.Service {
@@ -127,15 +143,15 @@ abstract class CoreServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetBlockRequest.fromBuffer(value),
         ($0.GetBlockResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.SendTransactionRequest,
-            $0.SendTransactionResponse>(
-        'sendTransaction',
-        sendTransaction_Pre,
+    $addMethod($grpc.ServiceMethod<$0.BroadcastTransactionRequest,
+            $0.BroadcastTransactionResponse>(
+        'broadcastTransaction',
+        broadcastTransaction_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.SendTransactionRequest.fromBuffer(value),
-        ($0.SendTransactionResponse value) => value.writeToBuffer()));
+            $0.BroadcastTransactionRequest.fromBuffer(value),
+        ($0.BroadcastTransactionResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetTransactionRequest,
             $0.GetTransactionResponse>(
         'getTransaction',
@@ -165,6 +181,15 @@ abstract class CoreServiceBase extends $grpc.Service {
             $0.BlockHeadersWithChainLocksRequest.fromBuffer(value),
         ($0.BlockHeadersWithChainLocksResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.TransactionsWithProofsRequest,
+            $0.TransactionsWithProofsResponse>(
+        'subscribeToTransactionsWithProofs',
+        subscribeToTransactionsWithProofs_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.TransactionsWithProofsRequest.fromBuffer(value),
+        ($0.TransactionsWithProofsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetStatusResponse> getStatus_Pre($grpc.ServiceCall call,
@@ -177,10 +202,10 @@ abstract class CoreServiceBase extends $grpc.Service {
     return getBlock(call, await request);
   }
 
-  $async.Future<$0.SendTransactionResponse> sendTransaction_Pre(
+  $async.Future<$0.BroadcastTransactionResponse> broadcastTransaction_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.SendTransactionRequest> request) async {
-    return sendTransaction(call, await request);
+      $async.Future<$0.BroadcastTransactionRequest> request) async {
+    return broadcastTransaction(call, await request);
   }
 
   $async.Future<$0.GetTransactionResponse> getTransaction_Pre(
@@ -201,12 +226,18 @@ abstract class CoreServiceBase extends $grpc.Service {
     yield* subscribeToBlockHeadersWithChainLocks(call, await request);
   }
 
+  $async.Stream<$0.TransactionsWithProofsResponse>
+      subscribeToTransactionsWithProofs_Pre($grpc.ServiceCall call,
+          $async.Future<$0.TransactionsWithProofsRequest> request) async* {
+    yield* subscribeToTransactionsWithProofs(call, await request);
+  }
+
   $async.Future<$0.GetStatusResponse> getStatus(
       $grpc.ServiceCall call, $0.GetStatusRequest request);
   $async.Future<$0.GetBlockResponse> getBlock(
       $grpc.ServiceCall call, $0.GetBlockRequest request);
-  $async.Future<$0.SendTransactionResponse> sendTransaction(
-      $grpc.ServiceCall call, $0.SendTransactionRequest request);
+  $async.Future<$0.BroadcastTransactionResponse> broadcastTransaction(
+      $grpc.ServiceCall call, $0.BroadcastTransactionRequest request);
   $async.Future<$0.GetTransactionResponse> getTransaction(
       $grpc.ServiceCall call, $0.GetTransactionRequest request);
   $async.Future<$0.GetEstimatedTransactionFeeResponse>
@@ -215,4 +246,7 @@ abstract class CoreServiceBase extends $grpc.Service {
   $async.Stream<$0.BlockHeadersWithChainLocksResponse>
       subscribeToBlockHeadersWithChainLocks(
           $grpc.ServiceCall call, $0.BlockHeadersWithChainLocksRequest request);
+  $async.Stream<$0.TransactionsWithProofsResponse>
+      subscribeToTransactionsWithProofs(
+          $grpc.ServiceCall call, $0.TransactionsWithProofsRequest request);
 }

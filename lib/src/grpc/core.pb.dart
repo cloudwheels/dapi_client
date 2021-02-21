@@ -3,15 +3,14 @@
 //  source: core.proto
 //
 // @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class GetStatusRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetStatusRequest', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetStatusRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -19,8 +18,16 @@ class GetStatusRequest extends $pb.GeneratedMessage {
   factory GetStatusRequest() => create();
   factory GetStatusRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetStatusRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetStatusRequest clone() => GetStatusRequest()..mergeFromMessage(this);
-  GetStatusRequest copyWith(void Function(GetStatusRequest) updates) => super.copyWith((message) => updates(message as GetStatusRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetStatusRequest copyWith(void Function(GetStatusRequest) updates) => super.copyWith((message) => updates(message as GetStatusRequest)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetStatusRequest create() => GetStatusRequest._();
@@ -32,18 +39,18 @@ class GetStatusRequest extends $pb.GeneratedMessage {
 }
 
 class GetStatusResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetStatusResponse', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'coreVersion', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, 'protocolVersion', $pb.PbFieldType.OU3)
-    ..a<$core.int>(3, 'blocks', $pb.PbFieldType.OU3)
-    ..a<$core.int>(4, 'timeOffset', $pb.PbFieldType.OU3)
-    ..a<$core.int>(5, 'connections', $pb.PbFieldType.OU3)
-    ..aOS(6, 'proxy')
-    ..a<$core.double>(7, 'difficulty', $pb.PbFieldType.OD)
-    ..aOB(8, 'testnet')
-    ..a<$core.double>(9, 'relayFee', $pb.PbFieldType.OD)
-    ..aOS(10, 'errors')
-    ..aOS(11, 'network')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetStatusResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coreVersion', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'protocolVersion', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blocks', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeOffset', $pb.PbFieldType.OU3)
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'connections', $pb.PbFieldType.OU3)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'proxy')
+    ..a<$core.double>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'difficulty', $pb.PbFieldType.OD)
+    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'testnet')
+    ..a<$core.double>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'relayFee', $pb.PbFieldType.OD)
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errors')
+    ..aOS(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network')
     ..hasRequiredFields = false
   ;
 
@@ -51,8 +58,16 @@ class GetStatusResponse extends $pb.GeneratedMessage {
   factory GetStatusResponse() => create();
   factory GetStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetStatusResponse clone() => GetStatusResponse()..mergeFromMessage(this);
-  GetStatusResponse copyWith(void Function(GetStatusResponse) updates) => super.copyWith((message) => updates(message as GetStatusResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetStatusResponse copyWith(void Function(GetStatusResponse) updates) => super.copyWith((message) => updates(message as GetStatusResponse)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetStatusResponse create() => GetStatusResponse._();
@@ -174,10 +189,10 @@ class GetBlockRequest extends $pb.GeneratedMessage {
     2 : GetBlockRequest_Block.hash,
     0 : GetBlockRequest_Block.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBlockRequest', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetBlockRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$core.int>(1, 'height', $pb.PbFieldType.OU3)
-    ..aOS(2, 'hash')
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'height', $pb.PbFieldType.OU3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash')
     ..hasRequiredFields = false
   ;
 
@@ -185,8 +200,16 @@ class GetBlockRequest extends $pb.GeneratedMessage {
   factory GetBlockRequest() => create();
   factory GetBlockRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetBlockRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetBlockRequest clone() => GetBlockRequest()..mergeFromMessage(this);
-  GetBlockRequest copyWith(void Function(GetBlockRequest) updates) => super.copyWith((message) => updates(message as GetBlockRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetBlockRequest copyWith(void Function(GetBlockRequest) updates) => super.copyWith((message) => updates(message as GetBlockRequest)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetBlockRequest create() => GetBlockRequest._();
@@ -219,8 +242,8 @@ class GetBlockRequest extends $pb.GeneratedMessage {
 }
 
 class GetBlockResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBlockResponse', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'block', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetBlockResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'block', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -228,8 +251,16 @@ class GetBlockResponse extends $pb.GeneratedMessage {
   factory GetBlockResponse() => create();
   factory GetBlockResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetBlockResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetBlockResponse clone() => GetBlockResponse()..mergeFromMessage(this);
-  GetBlockResponse copyWith(void Function(GetBlockResponse) updates) => super.copyWith((message) => updates(message as GetBlockResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetBlockResponse copyWith(void Function(GetBlockResponse) updates) => super.copyWith((message) => updates(message as GetBlockResponse)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetBlockResponse create() => GetBlockResponse._();
@@ -249,28 +280,36 @@ class GetBlockResponse extends $pb.GeneratedMessage {
   void clearBlock() => clearField(1);
 }
 
-class SendTransactionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendTransactionRequest', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
-    ..aOB(2, 'allowHighFees')
-    ..aOB(3, 'bypassLimits')
+class BroadcastTransactionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BroadcastTransactionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', $pb.PbFieldType.OY)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'allowHighFees')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bypassLimits')
     ..hasRequiredFields = false
   ;
 
-  SendTransactionRequest._() : super();
-  factory SendTransactionRequest() => create();
-  factory SendTransactionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SendTransactionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  SendTransactionRequest clone() => SendTransactionRequest()..mergeFromMessage(this);
-  SendTransactionRequest copyWith(void Function(SendTransactionRequest) updates) => super.copyWith((message) => updates(message as SendTransactionRequest));
+  BroadcastTransactionRequest._() : super();
+  factory BroadcastTransactionRequest() => create();
+  factory BroadcastTransactionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BroadcastTransactionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BroadcastTransactionRequest clone() => BroadcastTransactionRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BroadcastTransactionRequest copyWith(void Function(BroadcastTransactionRequest) updates) => super.copyWith((message) => updates(message as BroadcastTransactionRequest)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static SendTransactionRequest create() => SendTransactionRequest._();
-  SendTransactionRequest createEmptyInstance() => create();
-  static $pb.PbList<SendTransactionRequest> createRepeated() => $pb.PbList<SendTransactionRequest>();
+  static BroadcastTransactionRequest create() => BroadcastTransactionRequest._();
+  BroadcastTransactionRequest createEmptyInstance() => create();
+  static $pb.PbList<BroadcastTransactionRequest> createRepeated() => $pb.PbList<BroadcastTransactionRequest>();
   @$core.pragma('dart2js:noInline')
-  static SendTransactionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendTransactionRequest>(create);
-  static SendTransactionRequest _defaultInstance;
+  static BroadcastTransactionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BroadcastTransactionRequest>(create);
+  static BroadcastTransactionRequest _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get transaction => $_getN(0);
@@ -300,26 +339,34 @@ class SendTransactionRequest extends $pb.GeneratedMessage {
   void clearBypassLimits() => clearField(3);
 }
 
-class SendTransactionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendTransactionResponse', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..aOS(1, 'transactionId')
+class BroadcastTransactionResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BroadcastTransactionResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId')
     ..hasRequiredFields = false
   ;
 
-  SendTransactionResponse._() : super();
-  factory SendTransactionResponse() => create();
-  factory SendTransactionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SendTransactionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  SendTransactionResponse clone() => SendTransactionResponse()..mergeFromMessage(this);
-  SendTransactionResponse copyWith(void Function(SendTransactionResponse) updates) => super.copyWith((message) => updates(message as SendTransactionResponse));
+  BroadcastTransactionResponse._() : super();
+  factory BroadcastTransactionResponse() => create();
+  factory BroadcastTransactionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BroadcastTransactionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BroadcastTransactionResponse clone() => BroadcastTransactionResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BroadcastTransactionResponse copyWith(void Function(BroadcastTransactionResponse) updates) => super.copyWith((message) => updates(message as BroadcastTransactionResponse)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static SendTransactionResponse create() => SendTransactionResponse._();
-  SendTransactionResponse createEmptyInstance() => create();
-  static $pb.PbList<SendTransactionResponse> createRepeated() => $pb.PbList<SendTransactionResponse>();
+  static BroadcastTransactionResponse create() => BroadcastTransactionResponse._();
+  BroadcastTransactionResponse createEmptyInstance() => create();
+  static $pb.PbList<BroadcastTransactionResponse> createRepeated() => $pb.PbList<BroadcastTransactionResponse>();
   @$core.pragma('dart2js:noInline')
-  static SendTransactionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendTransactionResponse>(create);
-  static SendTransactionResponse _defaultInstance;
+  static BroadcastTransactionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BroadcastTransactionResponse>(create);
+  static BroadcastTransactionResponse _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get transactionId => $_getSZ(0);
@@ -332,8 +379,8 @@ class SendTransactionResponse extends $pb.GeneratedMessage {
 }
 
 class GetTransactionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTransactionRequest', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..aOS(1, 'id')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetTransactionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..hasRequiredFields = false
   ;
 
@@ -341,8 +388,16 @@ class GetTransactionRequest extends $pb.GeneratedMessage {
   factory GetTransactionRequest() => create();
   factory GetTransactionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetTransactionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetTransactionRequest clone() => GetTransactionRequest()..mergeFromMessage(this);
-  GetTransactionRequest copyWith(void Function(GetTransactionRequest) updates) => super.copyWith((message) => updates(message as GetTransactionRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetTransactionRequest copyWith(void Function(GetTransactionRequest) updates) => super.copyWith((message) => updates(message as GetTransactionRequest)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetTransactionRequest create() => GetTransactionRequest._();
@@ -363,8 +418,8 @@ class GetTransactionRequest extends $pb.GeneratedMessage {
 }
 
 class GetTransactionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTransactionResponse', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetTransactionResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -372,8 +427,16 @@ class GetTransactionResponse extends $pb.GeneratedMessage {
   factory GetTransactionResponse() => create();
   factory GetTransactionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetTransactionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetTransactionResponse clone() => GetTransactionResponse()..mergeFromMessage(this);
-  GetTransactionResponse copyWith(void Function(GetTransactionResponse) updates) => super.copyWith((message) => updates(message as GetTransactionResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetTransactionResponse copyWith(void Function(GetTransactionResponse) updates) => super.copyWith((message) => updates(message as GetTransactionResponse)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetTransactionResponse create() => GetTransactionResponse._();
@@ -405,11 +468,11 @@ class BlockHeadersWithChainLocksRequest extends $pb.GeneratedMessage {
     2 : BlockHeadersWithChainLocksRequest_FromBlock.fromBlockHeight,
     0 : BlockHeadersWithChainLocksRequest_FromBlock.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BlockHeadersWithChainLocksRequest', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeadersWithChainLocksRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$core.List<$core.int>>(1, 'fromBlockHash', $pb.PbFieldType.OY)
-    ..a<$core.int>(2, 'fromBlockHeight', $pb.PbFieldType.OU3)
-    ..a<$core.int>(3, 'count', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fromBlockHash', $pb.PbFieldType.OY)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fromBlockHeight', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'count', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -417,8 +480,16 @@ class BlockHeadersWithChainLocksRequest extends $pb.GeneratedMessage {
   factory BlockHeadersWithChainLocksRequest() => create();
   factory BlockHeadersWithChainLocksRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BlockHeadersWithChainLocksRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BlockHeadersWithChainLocksRequest clone() => BlockHeadersWithChainLocksRequest()..mergeFromMessage(this);
-  BlockHeadersWithChainLocksRequest copyWith(void Function(BlockHeadersWithChainLocksRequest) updates) => super.copyWith((message) => updates(message as BlockHeadersWithChainLocksRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BlockHeadersWithChainLocksRequest copyWith(void Function(BlockHeadersWithChainLocksRequest) updates) => super.copyWith((message) => updates(message as BlockHeadersWithChainLocksRequest)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BlockHeadersWithChainLocksRequest create() => BlockHeadersWithChainLocksRequest._();
@@ -471,10 +542,10 @@ class BlockHeadersWithChainLocksResponse extends $pb.GeneratedMessage {
     2 : BlockHeadersWithChainLocksResponse_Responses.chainLockSignatureMessages,
     0 : BlockHeadersWithChainLocksResponse_Responses.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BlockHeadersWithChainLocksResponse', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeadersWithChainLocksResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<BlockHeaders>(1, 'blockHeaders', subBuilder: BlockHeaders.create)
-    ..aOM<ChainLockSignatureMessages>(2, 'chainLockSignatureMessages', subBuilder: ChainLockSignatureMessages.create)
+    ..aOM<BlockHeaders>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockHeaders', subBuilder: BlockHeaders.create)
+    ..aOM<ChainLockSignatureMessages>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainLockSignatureMessages', subBuilder: ChainLockSignatureMessages.create)
     ..hasRequiredFields = false
   ;
 
@@ -482,8 +553,16 @@ class BlockHeadersWithChainLocksResponse extends $pb.GeneratedMessage {
   factory BlockHeadersWithChainLocksResponse() => create();
   factory BlockHeadersWithChainLocksResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BlockHeadersWithChainLocksResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BlockHeadersWithChainLocksResponse clone() => BlockHeadersWithChainLocksResponse()..mergeFromMessage(this);
-  BlockHeadersWithChainLocksResponse copyWith(void Function(BlockHeadersWithChainLocksResponse) updates) => super.copyWith((message) => updates(message as BlockHeadersWithChainLocksResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BlockHeadersWithChainLocksResponse copyWith(void Function(BlockHeadersWithChainLocksResponse) updates) => super.copyWith((message) => updates(message as BlockHeadersWithChainLocksResponse)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BlockHeadersWithChainLocksResponse create() => BlockHeadersWithChainLocksResponse._();
@@ -520,8 +599,8 @@ class BlockHeadersWithChainLocksResponse extends $pb.GeneratedMessage {
 }
 
 class BlockHeaders extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BlockHeaders', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..p<$core.List<$core.int>>(1, 'headers', $pb.PbFieldType.PY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeaders', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..p<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'headers', $pb.PbFieldType.PY)
     ..hasRequiredFields = false
   ;
 
@@ -529,8 +608,16 @@ class BlockHeaders extends $pb.GeneratedMessage {
   factory BlockHeaders() => create();
   factory BlockHeaders.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BlockHeaders.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BlockHeaders clone() => BlockHeaders()..mergeFromMessage(this);
-  BlockHeaders copyWith(void Function(BlockHeaders) updates) => super.copyWith((message) => updates(message as BlockHeaders));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BlockHeaders copyWith(void Function(BlockHeaders) updates) => super.copyWith((message) => updates(message as BlockHeaders)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BlockHeaders create() => BlockHeaders._();
@@ -545,8 +632,8 @@ class BlockHeaders extends $pb.GeneratedMessage {
 }
 
 class ChainLockSignatureMessages extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChainLockSignatureMessages', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..p<$core.List<$core.int>>(1, 'messages', $pb.PbFieldType.PY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ChainLockSignatureMessages', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..p<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'messages', $pb.PbFieldType.PY)
     ..hasRequiredFields = false
   ;
 
@@ -554,8 +641,16 @@ class ChainLockSignatureMessages extends $pb.GeneratedMessage {
   factory ChainLockSignatureMessages() => create();
   factory ChainLockSignatureMessages.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ChainLockSignatureMessages.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ChainLockSignatureMessages clone() => ChainLockSignatureMessages()..mergeFromMessage(this);
-  ChainLockSignatureMessages copyWith(void Function(ChainLockSignatureMessages) updates) => super.copyWith((message) => updates(message as ChainLockSignatureMessages));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ChainLockSignatureMessages copyWith(void Function(ChainLockSignatureMessages) updates) => super.copyWith((message) => updates(message as ChainLockSignatureMessages)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ChainLockSignatureMessages create() => ChainLockSignatureMessages._();
@@ -570,8 +665,8 @@ class ChainLockSignatureMessages extends $pb.GeneratedMessage {
 }
 
 class GetEstimatedTransactionFeeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetEstimatedTransactionFeeRequest', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'blocks', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetEstimatedTransactionFeeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blocks', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -579,8 +674,16 @@ class GetEstimatedTransactionFeeRequest extends $pb.GeneratedMessage {
   factory GetEstimatedTransactionFeeRequest() => create();
   factory GetEstimatedTransactionFeeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetEstimatedTransactionFeeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetEstimatedTransactionFeeRequest clone() => GetEstimatedTransactionFeeRequest()..mergeFromMessage(this);
-  GetEstimatedTransactionFeeRequest copyWith(void Function(GetEstimatedTransactionFeeRequest) updates) => super.copyWith((message) => updates(message as GetEstimatedTransactionFeeRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetEstimatedTransactionFeeRequest copyWith(void Function(GetEstimatedTransactionFeeRequest) updates) => super.copyWith((message) => updates(message as GetEstimatedTransactionFeeRequest)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetEstimatedTransactionFeeRequest create() => GetEstimatedTransactionFeeRequest._();
@@ -601,8 +704,8 @@ class GetEstimatedTransactionFeeRequest extends $pb.GeneratedMessage {
 }
 
 class GetEstimatedTransactionFeeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetEstimatedTransactionFeeResponse', package: const $pb.PackageName('org.dash.platform.dapi.v0'), createEmptyInstance: create)
-    ..a<$core.double>(1, 'fee', $pb.PbFieldType.OD)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetEstimatedTransactionFeeResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -610,8 +713,16 @@ class GetEstimatedTransactionFeeResponse extends $pb.GeneratedMessage {
   factory GetEstimatedTransactionFeeResponse() => create();
   factory GetEstimatedTransactionFeeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetEstimatedTransactionFeeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetEstimatedTransactionFeeResponse clone() => GetEstimatedTransactionFeeResponse()..mergeFromMessage(this);
-  GetEstimatedTransactionFeeResponse copyWith(void Function(GetEstimatedTransactionFeeResponse) updates) => super.copyWith((message) => updates(message as GetEstimatedTransactionFeeResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetEstimatedTransactionFeeResponse copyWith(void Function(GetEstimatedTransactionFeeResponse) updates) => super.copyWith((message) => updates(message as GetEstimatedTransactionFeeResponse)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetEstimatedTransactionFeeResponse create() => GetEstimatedTransactionFeeResponse._();
@@ -631,33 +742,314 @@ class GetEstimatedTransactionFeeResponse extends $pb.GeneratedMessage {
   void clearFee() => clearField(1);
 }
 
-class CoreApi {
-  $pb.RpcClient _client;
-  CoreApi(this._client);
+enum TransactionsWithProofsRequest_FromBlock {
+  fromBlockHash, 
+  fromBlockHeight, 
+  notSet
+}
 
-  $async.Future<GetStatusResponse> getStatus($pb.ClientContext ctx, GetStatusRequest request) {
-    var emptyResponse = GetStatusResponse();
-    return _client.invoke<GetStatusResponse>(ctx, 'Core', 'getStatus', request, emptyResponse);
-  }
-  $async.Future<GetBlockResponse> getBlock($pb.ClientContext ctx, GetBlockRequest request) {
-    var emptyResponse = GetBlockResponse();
-    return _client.invoke<GetBlockResponse>(ctx, 'Core', 'getBlock', request, emptyResponse);
-  }
-  $async.Future<SendTransactionResponse> sendTransaction($pb.ClientContext ctx, SendTransactionRequest request) {
-    var emptyResponse = SendTransactionResponse();
-    return _client.invoke<SendTransactionResponse>(ctx, 'Core', 'sendTransaction', request, emptyResponse);
-  }
-  $async.Future<GetTransactionResponse> getTransaction($pb.ClientContext ctx, GetTransactionRequest request) {
-    var emptyResponse = GetTransactionResponse();
-    return _client.invoke<GetTransactionResponse>(ctx, 'Core', 'getTransaction', request, emptyResponse);
-  }
-  $async.Future<GetEstimatedTransactionFeeResponse> getEstimatedTransactionFee($pb.ClientContext ctx, GetEstimatedTransactionFeeRequest request) {
-    var emptyResponse = GetEstimatedTransactionFeeResponse();
-    return _client.invoke<GetEstimatedTransactionFeeResponse>(ctx, 'Core', 'getEstimatedTransactionFee', request, emptyResponse);
-  }
-  $async.Future<BlockHeadersWithChainLocksResponse> subscribeToBlockHeadersWithChainLocks($pb.ClientContext ctx, BlockHeadersWithChainLocksRequest request) {
-    var emptyResponse = BlockHeadersWithChainLocksResponse();
-    return _client.invoke<BlockHeadersWithChainLocksResponse>(ctx, 'Core', 'subscribeToBlockHeadersWithChainLocks', request, emptyResponse);
-  }
+class TransactionsWithProofsRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, TransactionsWithProofsRequest_FromBlock> _TransactionsWithProofsRequest_FromBlockByTag = {
+    2 : TransactionsWithProofsRequest_FromBlock.fromBlockHash,
+    3 : TransactionsWithProofsRequest_FromBlock.fromBlockHeight,
+    0 : TransactionsWithProofsRequest_FromBlock.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsWithProofsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..oo(0, [2, 3])
+    ..aOM<BloomFilter>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bloomFilter', subBuilder: BloomFilter.create)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fromBlockHash', $pb.PbFieldType.OY)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fromBlockHeight', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'count', $pb.PbFieldType.OU3)
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sendTransactionHashes')
+    ..hasRequiredFields = false
+  ;
+
+  TransactionsWithProofsRequest._() : super();
+  factory TransactionsWithProofsRequest() => create();
+  factory TransactionsWithProofsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransactionsWithProofsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TransactionsWithProofsRequest clone() => TransactionsWithProofsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionsWithProofsRequest copyWith(void Function(TransactionsWithProofsRequest) updates) => super.copyWith((message) => updates(message as TransactionsWithProofsRequest)); // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransactionsWithProofsRequest create() => TransactionsWithProofsRequest._();
+  TransactionsWithProofsRequest createEmptyInstance() => create();
+  static $pb.PbList<TransactionsWithProofsRequest> createRepeated() => $pb.PbList<TransactionsWithProofsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static TransactionsWithProofsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionsWithProofsRequest>(create);
+  static TransactionsWithProofsRequest _defaultInstance;
+
+  TransactionsWithProofsRequest_FromBlock whichFromBlock() => _TransactionsWithProofsRequest_FromBlockByTag[$_whichOneof(0)];
+  void clearFromBlock() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  BloomFilter get bloomFilter => $_getN(0);
+  @$pb.TagNumber(1)
+  set bloomFilter(BloomFilter v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasBloomFilter() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBloomFilter() => clearField(1);
+  @$pb.TagNumber(1)
+  BloomFilter ensureBloomFilter() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get fromBlockHash => $_getN(1);
+  @$pb.TagNumber(2)
+  set fromBlockHash($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFromBlockHash() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFromBlockHash() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get fromBlockHeight => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set fromBlockHeight($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasFromBlockHeight() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFromBlockHeight() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get count => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set count($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasCount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCount() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get sendTransactionHashes => $_getBF(4);
+  @$pb.TagNumber(5)
+  set sendTransactionHashes($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasSendTransactionHashes() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSendTransactionHashes() => clearField(5);
+}
+
+class BloomFilter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BloomFilter', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vData', $pb.PbFieldType.OY)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nHashFuncs', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nTweak', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nFlags', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  BloomFilter._() : super();
+  factory BloomFilter() => create();
+  factory BloomFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BloomFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BloomFilter clone() => BloomFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BloomFilter copyWith(void Function(BloomFilter) updates) => super.copyWith((message) => updates(message as BloomFilter)); // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BloomFilter create() => BloomFilter._();
+  BloomFilter createEmptyInstance() => create();
+  static $pb.PbList<BloomFilter> createRepeated() => $pb.PbList<BloomFilter>();
+  @$core.pragma('dart2js:noInline')
+  static BloomFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BloomFilter>(create);
+  static BloomFilter _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get vData => $_getN(0);
+  @$pb.TagNumber(1)
+  set vData($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasVData() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVData() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get nHashFuncs => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set nHashFuncs($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNHashFuncs() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNHashFuncs() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get nTweak => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set nTweak($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNTweak() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNTweak() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get nFlags => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set nFlags($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNFlags() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNFlags() => clearField(4);
+}
+
+enum TransactionsWithProofsResponse_Responses {
+  rawTransactions, 
+  instantSendLockMessages, 
+  rawMerkleBlock, 
+  notSet
+}
+
+class TransactionsWithProofsResponse extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, TransactionsWithProofsResponse_Responses> _TransactionsWithProofsResponse_ResponsesByTag = {
+    1 : TransactionsWithProofsResponse_Responses.rawTransactions,
+    2 : TransactionsWithProofsResponse_Responses.instantSendLockMessages,
+    3 : TransactionsWithProofsResponse_Responses.rawMerkleBlock,
+    0 : TransactionsWithProofsResponse_Responses.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsWithProofsResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3])
+    ..aOM<RawTransactions>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawTransactions', subBuilder: RawTransactions.create)
+    ..aOM<InstantSendLockMessages>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'instantSendLockMessages', subBuilder: InstantSendLockMessages.create)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawMerkleBlock', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  TransactionsWithProofsResponse._() : super();
+  factory TransactionsWithProofsResponse() => create();
+  factory TransactionsWithProofsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransactionsWithProofsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TransactionsWithProofsResponse clone() => TransactionsWithProofsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionsWithProofsResponse copyWith(void Function(TransactionsWithProofsResponse) updates) => super.copyWith((message) => updates(message as TransactionsWithProofsResponse)); // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransactionsWithProofsResponse create() => TransactionsWithProofsResponse._();
+  TransactionsWithProofsResponse createEmptyInstance() => create();
+  static $pb.PbList<TransactionsWithProofsResponse> createRepeated() => $pb.PbList<TransactionsWithProofsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static TransactionsWithProofsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionsWithProofsResponse>(create);
+  static TransactionsWithProofsResponse _defaultInstance;
+
+  TransactionsWithProofsResponse_Responses whichResponses() => _TransactionsWithProofsResponse_ResponsesByTag[$_whichOneof(0)];
+  void clearResponses() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  RawTransactions get rawTransactions => $_getN(0);
+  @$pb.TagNumber(1)
+  set rawTransactions(RawTransactions v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRawTransactions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRawTransactions() => clearField(1);
+  @$pb.TagNumber(1)
+  RawTransactions ensureRawTransactions() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  InstantSendLockMessages get instantSendLockMessages => $_getN(1);
+  @$pb.TagNumber(2)
+  set instantSendLockMessages(InstantSendLockMessages v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasInstantSendLockMessages() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearInstantSendLockMessages() => clearField(2);
+  @$pb.TagNumber(2)
+  InstantSendLockMessages ensureInstantSendLockMessages() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.int> get rawMerkleBlock => $_getN(2);
+  @$pb.TagNumber(3)
+  set rawMerkleBlock($core.List<$core.int> v) { $_setBytes(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRawMerkleBlock() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRawMerkleBlock() => clearField(3);
+}
+
+class RawTransactions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RawTransactions', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..p<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
+
+  RawTransactions._() : super();
+  factory RawTransactions() => create();
+  factory RawTransactions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RawTransactions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  RawTransactions clone() => RawTransactions()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  RawTransactions copyWith(void Function(RawTransactions) updates) => super.copyWith((message) => updates(message as RawTransactions)); // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RawTransactions create() => RawTransactions._();
+  RawTransactions createEmptyInstance() => create();
+  static $pb.PbList<RawTransactions> createRepeated() => $pb.PbList<RawTransactions>();
+  @$core.pragma('dart2js:noInline')
+  static RawTransactions getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RawTransactions>(create);
+  static RawTransactions _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.List<$core.int>> get transactions => $_getList(0);
+}
+
+class InstantSendLockMessages extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'InstantSendLockMessages', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'org.dash.platform.dapi.v0'), createEmptyInstance: create)
+    ..p<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'messages', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
+
+  InstantSendLockMessages._() : super();
+  factory InstantSendLockMessages() => create();
+  factory InstantSendLockMessages.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory InstantSendLockMessages.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  InstantSendLockMessages clone() => InstantSendLockMessages()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  InstantSendLockMessages copyWith(void Function(InstantSendLockMessages) updates) => super.copyWith((message) => updates(message as InstantSendLockMessages)); // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static InstantSendLockMessages create() => InstantSendLockMessages._();
+  InstantSendLockMessages createEmptyInstance() => create();
+  static $pb.PbList<InstantSendLockMessages> createRepeated() => $pb.PbList<InstantSendLockMessages>();
+  @$core.pragma('dart2js:noInline')
+  static InstantSendLockMessages getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<InstantSendLockMessages>(create);
+  static InstantSendLockMessages _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.List<$core.int>> get messages => $_getList(0);
 }
 
